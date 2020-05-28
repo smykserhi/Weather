@@ -35,10 +35,10 @@ The final result will display:
   and a table with the 7 days weather information
 
   table have to contains:
-  day , min temperature, max temperature and the [icon of the weather](https://openweathermap.org/weather-conditions#Weather-Condition-Codes-2)
+  day , min temperature, max temperature and the [icon of the weather](https://openweathermap.org/weather-conditions#Weather-Condition)
 
 Insert the result into the div element wth the 'id=info' in the index.html
 
 
 ### IMPORTANT
-    **If the program don't find a city should display an error saying "CITY NOT FOUND"**
+    ** If the program don't find a city should display an error saying "CITY NOT FOUND" **
