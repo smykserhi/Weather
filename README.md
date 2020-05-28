@@ -34,7 +34,7 @@ The final result will display:
   Current Weather: current_weather
   and a table with the 7 days weather information
 
-  table have to contains:
+  table contains:
   day , min temperature, max temperature and the [icon of the weather](https://openweathermap.org/weather-conditions#Weather-Condition)
 
 Insert the result into the div element wth the 'id=info' in the index.html
@@ -42,3 +42,6 @@ Insert the result into the div element wth the 'id=info' in the index.html
 
 ### IMPORTANT
     ** If the program don't find a city should display an error saying "CITY NOT FOUND" **
+    
+    
+Create issues on the link below on the parent repo if you are stuck and want to talk about it. You can paste code, tag people and refer to other issues there. Please use it! It will be helpful for mentors and future students to see where common problems are. Link here: https://github.com/Code-the-Dream-School/Front-End-1-Week-5-Assignment/issues
