@@ -120,9 +120,9 @@ function fetchData(url) {
           }
           else {
             event.preventDefault();
-            getWeather() // call main function if fild is not empty
+            getWeather() // call main function if fild is not  empty
           }
-          form.classList.add('was-validated');
+          form.classList.add('was-validated') ;
         }, false);
       });
     }, false);
