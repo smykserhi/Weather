@@ -13,3 +13,16 @@ img{
   width: 40px;
   height: auto;
 }
+body{
+  /*background-image: url(./media/fog.jpg);*/
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+  height: 100vh;
+  background-attachment: fixed;
+  
+}
+#info:nth-child(1){
+  display: none;
+}
