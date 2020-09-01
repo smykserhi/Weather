@@ -42,12 +42,12 @@ function fetchData(url) {
         mainContent.style.backgroundImage = `url('media/sun.jpg')`;        
     }   
     //create current report
-    htmltext = ""      
-    htmltext += "<section>"  
+    htmltext = "";
+    htmltext += "<div>"  
         htmltext += `<p><h3><b>City:</b> ${data.name}</h3></p>`;
         htmltext += `<p><h4><b>Country:</b> ${data.sys.country}</h4></p>`
         htmltext += `<p><h4><b>Current weather:</b> ${data.weather[0].main} <b>temp:</b> ${data.main.temp} &#186F</h4></p>`
-    htmltext += "</section>"               
+    htmltext += "</div>"                  
     return data;
   }
   //creating table fot 7 days report
@@ -57,29 +57,29 @@ function fetchData(url) {
                 htmltext += `<table id="table" class="table table-dark table-striped">`
                 console.log(htmltext)    
                     htmltext += `<thead>`
-                        htmltext += `<tr>`
+                        htmltext += `<tr >`
                             htmltext += `<th scope="col">Date</th>`
-                            htmltext += `<<th scope="col">Min</th>`
-                            htmltext += `<<th scope="col">Max</th>`
-                            htmltext += `<th scope="col">Weather</th>`
-                        htmltext += `</tr>`
+                            htmltext += `<th scope="col">Min</th>`
+                            htmltext += `<th scope="col">Max</th>`
+                            htmltext += `<th scope="col">Weather</th>`                            
+                        htmltext += `</tr>`                        
                     htmltext += `</thead>`
                     htmltext += `<tbody>`
                     data.daily.map(el =>{ 
-                        htmltext += `<tr ">`
+                        htmltext += `<tr >`
                             htmltext += `<th scope="row">${nextDayDate()}</th>`
                             htmltext += `<th scope="row">${el.temp.min} &#186F</th>`
                             htmltext += `<th scope="row">${el.temp.max} &#186F</th>`
-                            htmltext += `<th scope="row"><img src="http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png" alt="icon"></th>`
-                        htmltext += `</tr>`
-                    })
+                            htmltext += `<th scope="row"><img src="http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png" alt="icon"></th>`                            
+                        htmltext += `</tr>`                       
+                    })                    
                     htmltext += `</tbody>`
                 htmltext += `</table>`
                 //reset current date
                 nextDay = new Date();
                 nextDay.setDate(nextDay.getDate() - 1 );
-                //insert in page
-                info.innerHTML = htmltext;                
+                //insert in page                             
+                info.innerHTML = htmltext;  
                 return data;
   }
   //main function 
@@ -102,7 +102,7 @@ function fetchData(url) {
         // get today's date then add one        
         nextDay.setDate(nextDay.getDate() + 1);  
         let day = nextDay.getDate();       
-        if (day < 10) { day = "0" + day }  
+        // if (day < 10) { day = "0" + day }  
         return  day ;
   }
 //Function validate input field an call main function if not empty
@@ -127,3 +127,4 @@ function fetchData(url) {
       });
     }, false);
   })();
+  
